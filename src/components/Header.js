@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Header = () => {
+const Header = () => {
     return (
         <h2>
-        Expense Tracker
+        Expense Tracker Malaysia
         </h2>
     )
 }
+
+export {Header}
