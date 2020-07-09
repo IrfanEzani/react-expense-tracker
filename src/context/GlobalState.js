@@ -10,7 +10,7 @@ const initialState = {
 };
 
 //create Context
-export const GlobalContext = createContext(initialState);
+const GlobalContext = createContext(initialState);
 
 //provide components
 const GlobalProvider = ({ children }) => {
@@ -22,4 +22,12 @@ const GlobalProvider = ({ children }) => {
   );
 };
 
-export default { GlobalProvider };
+//actions
+function deleteTransaction(id) {
+  dispatch({
+    type: 'DELETE',
+    payload: id
+  })
+}
+
+export  { GlobalProvider, GlobalContext };
